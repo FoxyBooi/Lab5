@@ -1,0 +1,210 @@
+{
+  "name": "modsec-php-lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-580ad43978c6",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true,
+        "ipam": {
+          "provider": "containerlab"
+        }
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "attacker": {
+      "index": "0",
+      "shortname": "attacker",
+      "longname": "clab-modsec-php-lab-attacker",
+      "fqdn": "attacker.modsec-php-lab.io",
+      "group": "",
+      "labdir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/attacker",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "clab",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-580ad43978c6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/attacker",
+        "clab-node-longname": "clab-modsec-php-lab-attacker",
+        "clab-node-name": "attacker",
+        "clab-node-type": "",
+        "clab-owner": "foxybooi",
+        "clab-topo-file": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/lab.clab.yml",
+        "containerlab": "modsec-php-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "phpserver": {
+      "index": "1",
+      "shortname": "phpserver",
+      "longname": "clab-modsec-php-lab-phpserver",
+      "fqdn": "phpserver.modsec-php-lab.io",
+      "group": "",
+      "labdir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/phpserver",
+      "kind": "linux",
+      "image": "custom-php:latest",
+      "mgmt-net": "clab",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-580ad43978c6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/phpserver",
+        "clab-node-longname": "clab-modsec-php-lab-phpserver",
+        "clab-node-name": "phpserver",
+        "clab-node-type": "",
+        "clab-owner": "foxybooi",
+        "clab-topo-file": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/lab.clab.yml",
+        "containerlab": "modsec-php-lab"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "sw0": {
+      "index": "2",
+      "shortname": "sw0",
+      "longname": "clab-modsec-php-lab-sw0",
+      "fqdn": "sw0.modsec-php-lab.io",
+      "group": "",
+      "labdir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/sw0",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "clab",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-580ad43978c6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/sw0",
+        "clab-node-longname": "clab-modsec-php-lab-sw0",
+        "clab-node-name": "sw0",
+        "clab-node-type": "",
+        "clab-owner": "foxybooi",
+        "clab-topo-file": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/lab.clab.yml",
+        "containerlab": "modsec-php-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "waf": {
+      "index": "3",
+      "shortname": "waf",
+      "longname": "clab-modsec-php-lab-waf",
+      "fqdn": "waf.modsec-php-lab.io",
+      "group": "",
+      "labdir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/waf",
+      "kind": "linux",
+      "image": "custom-waf:latest",
+      "mgmt-net": "clab",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-580ad43978c6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/clab-modsec-php-lab/waf",
+        "clab-node-longname": "clab-modsec-php-lab-waf",
+        "clab-node-name": "waf",
+        "clab-node-type": "",
+        "clab-owner": "foxybooi",
+        "clab-topo-file": "/run/media/foxybooi/EBFF-7F73/School/COMP 2006 - Network Design/labs/Lab5/lab.clab.yml",
+        "containerlab": "modsec-php-lab"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "attacker",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:51:ed:25",
+          "peer": "z"
+        },
+        "z": {
+          "node": "sw0",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:fe:aa:e7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "waf",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:0e:b0:d4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "sw0",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:0a:1d:dd",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "phpserver",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:c0:4d:00",
+          "peer": "z"
+        },
+        "z": {
+          "node": "sw0",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:9e:ba:21",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
